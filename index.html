@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ifood</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+
+        header {
+            position: fixed;
+            background-color: #f5f5f5;
+            height: 136px;
+            width: 100%;
+
+        }
+
+        .grid-header {
+            display: grid;
+            grid-template-columns: 50px 1fr 50px;
+            grid-template-rows: 1fr 1fr 1fr;
+
+        }
+
+        .grid-head {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            display: grid;
+            grid-template-columns: 100px 1fr 120px 120px;
+            grid-template-rows: 1fr;
+            gap: 20px;
+
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+
+        }
+
+        .logo {
+            grid-column: 1/2;
+
+
+        }
+
+        nav {
+            display: flex;
+
+            list-style-type: none;
+            grid-column: 2/3;
+        }
+
+        nav li {
+            margin: 15px;
+
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .conta {
+            grid-column: 3/4;
+
+        }
+
+        .conta a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .cadastro {
+            grid-column: 4/5;
+            background-color: #EA1D2C;
+            padding: 15px 20px 15px 20px;
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+
+        .cadastro a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+
+
+
+
+
+
+
+
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 643px;
+
+
+        }
+
+        .backmain {
+            grid-column: 1/6;
+            grid-row: 1/2;
+            background-image: url(backgroudifood.png);
+            background-size: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(7, 1fr);
+
+        }
+
+        .titulo {
+            top: 10px;
+            text-align: center;
+            grid-row: 3/4;
+
+
+        }
+
+        .titulo h1 {
+            color: rgb(75, 72, 72);
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .titulo p {
+            font-size: 1.2em;
+        }
+
+
+
+
+
+
+        .pesquisa {
+            grid-row: 5/6;
+            display: grid;
+            grid-template-columns: 1fr 1fr 180px 1fr;
+            gap: 10px;
+        }
+
+        .texto {
+            border-radius: 5px;
+            border: 1px solid rgb(194, 184, 184);
+            height: 40px;
+            width: 500px;
+            font-size: 1.2em;
+
+        }
+
+        .grid-texto {
+            grid-column: 2/3;
+        }
+
+        .market {
+            background-color: #EA1D2C;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            height: 40px;
+            border-radius: 5px;
+
+        }
+
+        .categorias {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            display: flex;
+            justify-content: center;
+            border-radius: 5px;
+            gap: 10px;
+        }
+
+        .categorias2 {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            display: flex;
+            justify-content: center;
+            border-radius: 5px;
+            gap: 10px;
+        }
+
+
+        .categorias p,
+        .categorias2 p {
+            display: flex;
+            border: 1px solid rgb(138, 135, 135);
+            border-radius: 5px;
+            padding: 10px;
+            height: 40px;
+            color: rgb(75, 73, 73);
+
+        }
+
+        .grid-categorias {
+            grid-row: 6/7;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header class="grid-header">
+        <div class="grid-head">
+
+            <div class="logo">
+                <img src="ifood-43.png" alt="logo">
+            </div>
+            <nav>
+                <li><a href="#">Entregador</a></li>
+                <li><a href="#">Restaurante e mercado</a></li>
+                <li><a href="#">Carreiras</a></li>
+                <li><a href="#">Ifood Cards</a></li>
+            </nav>
+            <div class="conta">
+                <p><a href="#">Criar Conta</a></p>
+            </div>
+            <div class="cadastro">
+                <p><a href="#">Entrar</a></p>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+        <div class="backmain">
+            <div class="titulo">
+                <h1>Faça mercado no iFood</h1>
+                <p>Entregamos tudo o que precisa na porta da sua casa, de hortifruti a itens de limpeza</p>
+            </div>
+            <div class="pesquisa">
+                <div class="grid-texto">
+                    <input type="text" class="texto" placeholder=" &#x1F50D Em qual endereço voçê está">
+
+                </div>
+                <div class="market">
+                    <p>Ver mercados próximos</p>
+                </div>
+
+            </div>
+            <div class="grid-categorias">
+
+                <div class="categorias">
+                    <p>Frios</p>
+                    <p>laticínios</p>
+                    <p>Feira</p>
+                    <p>Bebidas</p>
+                    <p>Doces</p>
+                    <p>Massas</p>
+                    <p>Limpeza</p>
+
+                </div>
+                <div class="categorias2">
+                    <p>Padaria</p>
+                    <p>Higiene</p>
+                    <p>Congelados</p>
+                    <p>Carnes</p>
+                    <p>Cerveja</p>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <h1>
+            Footer
+        </h1>
+
+    </footer>
+
+
+
+</body>
+
+</html>
